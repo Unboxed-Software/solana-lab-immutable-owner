@@ -38,8 +38,6 @@ async function testTryingToTransferOwner(inputs: TransferOwnerInputs) {
   const connection = new Connection(clusterApiUrl('devnet'), 'confirmed');
   const payer = await initializeKeypair(connection);
 
-  // Initialize the account on this
-  // Ask Christian about the dev helpers initialize keypair function
   const otherOwner = Keypair.generate();
 
   const mintKeypair = Keypair.generate();
