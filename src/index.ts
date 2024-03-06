@@ -42,6 +42,9 @@ async function testTryingToTransferOwner(inputs: TransferOwnerInputs) {
 
   const mintKeypair = Keypair.generate();
 
+  const ourTokenAccountKeypair = Keypair.generate();
+  const ourTokenAccount = ourTokenAccountKeypair.publicKey;
+
   const mint = await createMint(
     connection,
     payer,
@@ -52,9 +55,6 @@ async function testTryingToTransferOwner(inputs: TransferOwnerInputs) {
     undefined,
     TOKEN_2022_PROGRAM_ID,
   );
-
-  const ourTokenAccountKeypair = Keypair.generate();
-  const ourTokenAccount = ourTokenAccountKeypair.publicKey;
 
   const createOurTokenAccountSignature = await createTokenAccountWithImmutableOwner(
     connection,
