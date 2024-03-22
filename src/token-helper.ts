@@ -46,7 +46,6 @@ export async function createTokenAccountWithImmutableOwner(
 
   transaction.feePayer = payer.publicKey;
 
-  // Send transaction
   return await sendAndConfirmTransaction(
     connection,
     transaction,
