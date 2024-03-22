@@ -9,4 +9,5 @@ export async function createTokenAccountWithImmutableOwner(
   tokenAccountKeypair: Keypair
 ): Promise<string> {
   // code goes here
+  throw new Error("Replace this with code")
 }
